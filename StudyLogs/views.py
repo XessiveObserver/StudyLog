@@ -15,6 +15,7 @@ def index(request):
 @login_required
 def topics(request):
     """Show all topics."""
+    # Restricting access to appropriate users.
     topics = Topic.objects.filter(owner=request.user).order_by('date_added')
     context = {'topics': topics}
     return render(request, 'StudyLogs/topics.html', context)
@@ -76,6 +77,8 @@ def edit_entry(request, entry_id):
     """Edit an existing entry."""
     entry = Entry.objects.get(id=entry_id)
     topic = entry.topic
+    if topic.owner != request.user:
+        raise Http404
 
     if request.method != 'POST':
         # Initial request; pre-fill form with the current entry
