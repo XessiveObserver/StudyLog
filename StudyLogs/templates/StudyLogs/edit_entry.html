@@ -1,0 +1,17 @@
+{% extends 'StudyLogs/base.html' %}
+
+{% block content %}
+    <p>
+        <a href="{% url 'StudyLogs:topic' topic.id %}">{{ topic }}</a>
+    </p>
+
+    <p>
+        Edit entry:
+    </p>
+
+    <form action="{% url 'StudyLogs:edit_entry' entry.id %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Save Changes</button>
+    </form>
+{% endblock content %}
