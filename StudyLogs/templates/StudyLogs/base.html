@@ -1,12 +1,45 @@
-<p>
-    <a href="{% url 'StudyLogs:index' %}">Study Log</a> - 
-    <a href="{% url 'StudyLogs:topics' %}">Topics</a> -
-    {% if user.is_authenticated %}
-        Hello, {{ user.username }}.
-        <a href="{% url 'users:logout' %}">Log out</a>
-    {% else %}
-        <a href="{% url 'users:register' %}">Register</a> -
-        <a href="{% url 'users:login' %}">Log in</a>
-    {% endif %}
-</p>
-{% block content%}{% endblock content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            Study Log
+        {% endblock title %}
+    </title>
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock css %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="nav-link">
+                    <a href="{% url 'StudyLogs:index' %}">Study Log</a>
+                </li class="nav-link">
+                <li class="nav-link">
+                    <a href="{% url 'StudyLogs:topics' %}">Topics</a>
+                </li class="nav-link">
+                {% if user.is_authenticated %}
+                Hello, {{ user.username }}.
+                <li class="nav-link">
+                    <a href="{% url 'users:logout' %}">Log out</a>
+                </li class="nav-link">
+                {% else %}
+                <li class="nav-link">
+                    <a href="{% url 'users:register' %}">Register</a>
+                </li class="nav-link">
+                <li class="nav-link">
+                    <a href="{% url 'users:login' %}">Log in</a>
+                </li class="nav-link">
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    {% block content%}{% endblock content %}
+</body>
+</html>
