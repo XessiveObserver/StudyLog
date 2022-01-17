@@ -12,34 +12,41 @@
     </title>
     {% block css %}
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
     {% endblock css %}
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li class="nav-link">
-                    <a href="{% url 'StudyLogs:index' %}">Study Log</a>
-                </li class="nav-link">
-                <li class="nav-link">
-                    <a href="{% url 'StudyLogs:topics' %}">Topics</a>
-                </li class="nav-link">
-                {% if user.is_authenticated %}
-                Hello, {{ user.username }}.
-                <li class="nav-link">
-                    <a href="{% url 'users:logout' %}">Log out</a>
-                </li class="nav-link">
-                {% else %}
-                <li class="nav-link">
-                    <a href="{% url 'users:register' %}">Register</a>
-                </li class="nav-link">
-                <li class="nav-link">
-                    <a href="{% url 'users:login' %}">Log in</a>
-                </li class="nav-link">
-                {% endif %}
-            </ul>
-        </nav>
-    </header>
-    {% block content%}{% endblock content %}
+    <div class="container">
+        <header class="header">
+            <nav>
+                <ul>
+                    <li class="nav-link">
+                        <a href="{% url 'StudyLogs:index' %}">Study Log</a>
+                    </li class="nav-link">
+                    <li class="nav-link">
+                        <a href="{% url 'StudyLogs:topics' %}">Topics</a>
+                    </li class="nav-link">
+                    <span style="margin-left: 45em; color: darkcyan; font-weight: bold;">
+                        {% if user.is_authenticated %}
+                        Hello, {{ user.username }}.
+                    </span>
+                    <li class="nav-link" style="float: inline-end; margin-right: 3em;">
+                        <a href="{% url 'users:logout' %}">Log out</a>
+                    </li class="nav-link">
+                    {% else %}
+                    <li class="nav-link" style="float: inline-end;">
+                        <a href="{% url 'users:register' %}">Register</a>
+                    </li class="nav-link">
+                    <li class="nav-link" style="float: inline-end;">
+                        <a href="{% url 'users:login' %}">Log in</a>
+                    </li class="nav-link">
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+        <aside class="aside">{% block aside %}Topics{% endblock aside %}</aside>
+        <article class="article">{% block content%}{% endblock content %}</article>
+        <footer class="footer">All rights reserver &copy; 2022, Xessive Observer</footer>
+    </div>
 </body>
 </html>
