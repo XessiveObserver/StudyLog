@@ -31,6 +31,8 @@ nav-link a:visited{
 
 /* Grid layout */
 .header{
+    display: flex;
+    flex-direction: column;
     grid-area: header;
 }
 

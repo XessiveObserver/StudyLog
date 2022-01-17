@@ -26,11 +26,10 @@
                     <li class="nav-link">
                         <a href="{% url 'StudyLogs:topics' %}">Topics</a>
                     </li class="nav-link">
-                    <span style="margin-left: 45em; color: darkcyan; font-weight: bold;">
-                        {% if user.is_authenticated %}
-                        Hello, {{ user.username }}.
-                    </span>
-                    <li class="nav-link" style="float: inline-end; margin-right: 3em;">
+                    {% if user.is_authenticated %}
+                        <li class="nav-link" style="float: inline-end;">Hello, {{ user.username }}.</li>
+    
+                    <li class="nav-link" style="float: inline-end;">
                         <a href="{% url 'users:logout' %}">Log out</a>
                     </li class="nav-link">
                     {% else %}
