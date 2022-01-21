@@ -1,9 +1,10 @@
 {% extends 'StudyLogs/base.html'%}
 
 {% block content %}
-    <p>Topics</p>
+    <p class="topics-heading">Topics</p>
+    <hr class="horizontal-topics">
 
-    <ul>
+    <ul class="topics">
         {% for topic in topics %}
         <li>
             <a href="{% url 'StudyLogs:topic' topic.id %}">{{topic}}</a>
@@ -13,6 +14,7 @@
             No topic has been added yet.
         </li>
         {% endfor %}
+        <a href="{% url 'StudyLogs:new_topic' %}" class="add-topic-link">Add new topic</a>
     </ul>
-    <a href="{% url 'StudyLogs:new_topic' %}">Add a new topic</a>
+   
 {% endblock content %}

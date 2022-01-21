@@ -1,0 +1,54 @@
+.topic{
+    margin: 1em;
+    font-weight: bolder;
+    font-size: 1.8em;
+    color: rgb(9, 12, 90);
+}
+
+.horizontal-topic{
+    width: 58em;
+    opacity: 0.5;
+}
+
+.entries {
+    margin: 2em;
+    font-weight: bold;
+    color: rgb(7, 7, 151);
+    font-size: 1.3em;
+}
+
+.add-new-entry a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4em;
+    margin: 1.2em;
+    background-color: darkblue;
+    color: white;
+    text-transform: capitalize;
+    border-radius: 0.5em;
+}
+
+.entry-list li{
+    list-style: none;
+}
+
+.date {
+    font-weight:600;
+    color: rgb(75, 36, 9);
+}
+
+.entry-content {
+    margin-right: 2em;
+    color: red;
+}
+
+.edit-entry-link a {
+    background-color: blue;
+    color: white;
+    text-transform: capitalize;
+    border-radius: 0.5em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4em;
+
+}

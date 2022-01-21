@@ -1,12 +1,14 @@
 nav{
-    background-color: rgb(92, 214, 218);
+    box-shadow: 0.1em 0.1em 0.5em rgb(205, 209, 216);
     height: 10vh;
     vertical-align: middle;
     max-width: 100%;
     border: none;
+    border-radius: 0.2em;
+    margin:0.3em;
 }
 .nav-link{
-    margin: 1.5em;
+    margin: 0.5em;
     list-style: none;
     display: inline-block;
     text-transform: capitalize;
@@ -14,11 +16,12 @@ nav{
 
 .nav-link a{
     text-decoration: none;
-    color:cornsilk;
+    color:rgb(8, 27, 53);
     font-weight: bolder;
+    vertical-align: middle;
 }
 .nav-link a:hover{
-    color: rgb(87, 46, 201);
+    color: rgb(31, 129, 72);
 }
 
 nav-link a:visited{
@@ -38,10 +41,16 @@ nav-link a:visited{
 
 .aside{
     grid-area: sidebar;
+    box-shadow: 0.1em 0.1em 0.5em rgb(60, 64, 70);
+    border-radius: 0.2em;
+    margin:0.5em;
 }
 
 .article{
     grid-area: content;
+    box-shadow: 0.1em 0.1em 0.5em rgb(118, 136, 132);
+    border-radius: 0.2em;
+    margin:0.5em;
 }
 
 .footer {
