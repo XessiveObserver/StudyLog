@@ -3,7 +3,7 @@
 {% block content %}
 
     <p class="topic">Topic: {{ topic }}</p>
-    <hr class="horizontal-topic">
+    <hr>
 
     <p class="entries">Entries</p>
     <p class="add-new-entry">
@@ -23,7 +23,7 @@
                 </p>
             </li>
         {% empty %}
-            <li>
+            <li class="empty">
                 There are no entries for this topic yet.
             </li>
         {% endfor %}

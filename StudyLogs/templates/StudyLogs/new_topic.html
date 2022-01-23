@@ -1,11 +1,13 @@
 {% extends 'StudyLogs/base.html' %}
 
 {% block content %}
-    <p>Add new topic:</p>
+    <p class="new-topic">Add new topic:</p>
 
-    <form action="{% url 'StudyLogs:new_topic' %}" method="POST">
+    <hr>
+
+    <form action="{% url 'StudyLogs:new_topic' %}" method="POST" class="form">
         {% csrf_token %}
         {{form.as_p}}
-        <button name="submit">Add topic</button>
+        <button name="submit" class="add-topic">Add topic</button>
     </form>
 {% endblock content %}

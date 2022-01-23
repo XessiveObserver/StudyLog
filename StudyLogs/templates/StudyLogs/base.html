@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="{% static 'css/index.css' %}">
         <link rel="stylesheet" href="{% static 'css/topics.css' %}">
         <link rel="stylesheet" href="{% static 'css/topic.css' %}">
+        <link rel="stylesheet" href="{% static 'css/new-entry.css' %}">
+        <link rel="stylesheet" href="{% static 'css/new-topic.css' %}">
+        <link rel="stylesheet" href="{% static 'css/edit-entry.css' %}">
     {% endblock css %}
 </head>
 <body>
@@ -45,7 +48,13 @@
                 </ul>
             </nav>
         </header>
-        <aside class="aside">{% block aside %}Topics{% endblock aside %}</aside>
+        <aside class="aside">
+            {% block aside %}
+                <p>
+                    <a href="{% url 'StudyLogs:topics' %}" class="topics">Topics</a>
+                </p>
+            {% endblock aside %}
+        </aside>
         <article class="article">{% block content%}{% endblock content %}</article>
         <footer class="footer">All rights reserver &copy; 2022, Xessive Observer</footer>
     </div>

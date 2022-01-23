@@ -1,0 +1,19 @@
+.new-topic{
+    margin: 1em;
+    color: darkgreen;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+.form{
+    margin: 1em;
+    
+}
+.add-topic {
+    border: none;
+    padding: 0.8em;
+    color: white;
+    background-color: darkgreen;
+    text-transform: capitalize;
+    border-radius: 0.8em;
+}

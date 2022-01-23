@@ -1,17 +1,19 @@
 {% extends 'StudyLogs/base.html' %}
 
 {% block content %}
-    <p>
+    <p class="edit-entry">
         <a href="{% url 'StudyLogs:topic' topic.id %}">{{ topic }}</a>
     </p>
 
-    <p>
+    <hr>
+
+    <p class="edit-entry-lable">
         Edit entry:
     </p>
 
-    <form action="{% url 'StudyLogs:edit_entry' entry.id %}" method="POST">
+    <form action="{% url 'StudyLogs:edit_entry' entry.id %}" method="POST" class="form">
         {% csrf_token %}
         {{ form.as_p }}
-        <button>Save Changes</button>
+        <button class="save-changes">Save Changes</button>
     </form>
 {% endblock content %}

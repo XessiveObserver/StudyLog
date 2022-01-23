@@ -1,18 +1,20 @@
 {% extends 'StudyLogs/base.html' %}
 
 {% block content %}
-    <p>
+    <p class="topic-link">
         <a href="{% url 'StudyLogs:topic' topic.id %}">{{ topic }}</a>
     </p>
 
-    <p>
+    <hr>
+
+    <p class="add-new-entry-lable">
         Add new entry:
     </p>
 
-    <form action="{% url 'StudyLogs:new_entry' topic.id %}" method="POST">
+    <form action="{% url 'StudyLogs:new_entry' topic.id %}" method="POST" class="form">
         {% csrf_token %}
         {{ form.as_p }}
-        <button name="submit">Add entry</button>
+        <button name="submit" class="add-entry">Add entry</button>
     </form>
 
 {% endblock content %}

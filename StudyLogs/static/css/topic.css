@@ -5,10 +5,6 @@
     color: rgb(9, 12, 90);
 }
 
-.horizontal-topic{
-    width: 58em;
-    opacity: 0.5;
-}
 
 .entries {
     margin: 2em;
@@ -51,4 +47,8 @@
     font-weight: bold;
     padding: 0.4em;
 
+}
+.empty {
+    color: darkred;
+    font-weight: bold;
 }

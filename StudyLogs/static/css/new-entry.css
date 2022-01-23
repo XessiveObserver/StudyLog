@@ -1,0 +1,30 @@
+.topic-link {
+    margin: 2em;
+}
+
+.topic-link a {
+    text-decoration: none;
+    color: rgb(0, 92, 128);
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+.topic-link a:hover {
+    color: darkblue;
+}
+.add-new-entry-lable {
+    margin: 1.3em;
+    color: darkcyan;
+    font-weight: bold;
+}
+.form{
+    margin: 1.3em;
+}
+.add-entry {
+    background-color: darkcyan;
+    color: white;
+    font-weight: bolder;
+    padding: 0.8em;
+    border: none;
+    border-radius: 0.8em;
+    text-transform: capitalize;
+}

@@ -1,0 +1,34 @@
+.edit-entry {
+    margin: 2em;
+}
+.edit-entry a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bolder;
+    color: rgb(47, 79, 77);
+    font-size: 1.3em;
+}
+.edit-entry a:hover {
+    color: green;
+}
+
+.edit-entry-lable {
+    margin: 1em;
+    color: #000;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.form {
+    margin: 1em;
+}
+
+.save-changes {
+    background-color: darkgreen;
+    color: white;
+    padding: 0.8em;
+    text-transform: capitalize;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.8em;
+}
