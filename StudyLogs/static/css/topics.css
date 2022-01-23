@@ -2,8 +2,9 @@
     font-weight: bolder;
     font-size: 1.5em;
     color: rgb(5, 63, 5);
-    margin: 2em;
+    margin: 3em;
 }
+
 
 .topics li {
     list-style: none;
@@ -18,14 +19,13 @@
 }
 
 .topics li a:hover{
-    transform: scale();
     color: rgb(65, 0, 139);
 }
 
 .add-topic-link{
     text-decoration: none;
     font-weight: bolder;
-    margin: 0.1em;
+    margin: 1em;
     color: white;
     background-color: green;
     padding: 0.3em;
