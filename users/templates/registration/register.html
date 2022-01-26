@@ -1,10 +1,10 @@
 {% extends "StudyLogs/base.html" %}
 
 {% block content %}
-    <form method="post" action="{% url 'users:register' %}">
+    <form method="post" action="{% url 'users:register' %}" class="register-form">
     {% csrf_token %}
     {{ form.as_p }}
-    <button name="submit">Register</button>
+    <button name="submit" class="register-button">Register</button>
     <input type="hidden" name="next" value="{% url 'StudyLogs:index' %}" />
     </form>
 {% endblock content %}
